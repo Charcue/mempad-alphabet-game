@@ -1,6 +1,7 @@
 import random
 import time
 import draw_screen_pick
+import flash_number
 
 
 def alpha_figures():
@@ -99,7 +100,8 @@ def ask_for_pair():
             current_board_list[choice_1] = answer_list[choice_1]
             # print(current_board_list)
             repeat_1 = "true"
-        draw_screen_pick.print_pick(current_board_list)
+        # draw_screen_pick.print_pick(current_board_list)
+        flash_number.flashNumber(choice_1,answer_list[choice_1], current_board_list)
 
     while repeat_2 == "false":
         choice_2 = int(input("Enter your second choice!"))
@@ -111,7 +113,8 @@ def ask_for_pair():
             continue
         # Flip second number
         current_board_list[choice_2] = answer_list[choice_2]
-        draw_screen_pick.print_pick(current_board_list)
+        # draw_screen_pick.print_pick(current_board_list)
+        flash_number.flashNumber(choice_2,answer_list[choice_2], current_board_list)
         # print(current_board_list)
         if answer_list[choice_1].lower() == answer_list[choice_2].lower():
             print("Yes!")
