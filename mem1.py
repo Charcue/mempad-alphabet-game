@@ -1,6 +1,7 @@
 import random
 import time
 import draw_screen_pick
+import draw_screen_try
 import flash_number
 
 
@@ -95,21 +96,24 @@ def ask_for_pair():
         choice_1 = int(input("Enter your first choice!"))
         if current_board_list[choice_1] not in original_board_list:
             print("Try again!")
+            draw_screen_try.print_try_pick(current_board_list)
         else:
             # Flip second number
             current_board_list[choice_1] = answer_list[choice_1]
             # print(current_board_list)
+            flash_number.flashNumber(choice_1,answer_list[choice_1], current_board_list)
             repeat_1 = "true"
         # draw_screen_pick.print_pick(current_board_list)
-        flash_number.flashNumber(choice_1,answer_list[choice_1], current_board_list)
 
     while repeat_2 == "false":
         choice_2 = int(input("Enter your second choice!"))
         if choice_1 == choice_2:
             print("Same number chosen!  Try again!\n")
+            draw_screen_try.print_try_pick(current_board_list)
             continue
         if current_board_list[choice_2] not in original_board_list:
             print("Try again!")
+            draw_screen_try.print_try_pick(current_board_list)
             continue
         # Flip second number
         current_board_list[choice_2] = answer_list[choice_2]
@@ -123,7 +127,7 @@ def ask_for_pair():
             print("Sorry, wrong answers!")
             current_board_list[choice_1] = str(choice_1)
             current_board_list[choice_2] = str(choice_2)
-            time.sleep(5)
+            time.sleep(3)
             repeat_2 = "true"
     print(answer_list[choice_1])
     print(answer_list[choice_2])
