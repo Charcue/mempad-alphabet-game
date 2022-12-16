@@ -2,6 +2,8 @@ import random
 import time
 import draw_screen_pick
 import draw_screen_try
+import draw_screen_great
+import draw_screen_win
 import flash_number
 
 
@@ -122,8 +124,11 @@ def ask_for_pair():
         # print(current_board_list)
         if answer_list[choice_1].lower() == answer_list[choice_2].lower():
             print("Yes!")
+            draw_screen_great.print_great_job(current_board_list)
+            time.sleep(3)
             repeat_2 = "true"
         else:
+            draw_screen_try.print_try_pick(current_board_list)
             print("Sorry, wrong answers!")
             current_board_list[choice_1] = str(choice_1)
             current_board_list[choice_2] = str(choice_2)
@@ -156,6 +161,10 @@ fill_cards(current_board_list)
 # current_board = board[:]
 # draw_grid(current_board)
 ask_for_pair()
-for answer in answer_list:
+# for answer in answer_list:
+for i in range(5):
     ask_for_pair()
+    if current_board_list == answer_list:
+        break
 draw_screen_pick.print_pick(current_board_list)
+draw_screen_win.print_you_win(current_board_list)
