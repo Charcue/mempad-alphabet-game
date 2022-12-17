@@ -3,12 +3,6 @@ import time
 import sys
 import random
 
-o_list = ["0", "1", "2", "3", "4",
-          "5", "6", "7", "8", "9"]
-
-c= ["a", "A", "2", "3", "4",
-    "5", "6", "7", "8", "9"]
-
 def print_try_pick(c):
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\n" * 5)
