@@ -7,6 +7,7 @@
 # The terminal should be be maximized for better
 # readability and alignment
 
+
 # Importing random and time
 import random
 import time
