@@ -5,7 +5,7 @@ import random
 
 def print_great_job(c):
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("\n" * 5)
+    print("\n" * 4)
     print("  ╭─────╮  ╭─────╮  ╭─────╮                 ____                _         _       _     _             < hi >") 
     print("  │     │  │     │  │     │                / ___|_ __ ___  __ _| |_      | | ___ | |__ | |             ----") 
     print("  │  {}  │  │  {}  │  │  {}  │               | |  _| '__/ _ \/ _` | __|  _  | |/ _ \| '_ \| |                \\       .".format( c[7],c[8],c[9]))

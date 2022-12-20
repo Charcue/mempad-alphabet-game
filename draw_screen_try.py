@@ -5,7 +5,7 @@ import random
 
 def print_try_pick(c):
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("\n" * 5)
+    print("\n" * 4)
     print("  ╭─────╮  ╭─────╮  ╭─────╮                _____                               _       _              < hi >") 
     print("  │     │  │     │  │     │               |_   _| __ _   _    __ _  __ _  __ _(_)_ __ | |              ----") 
     print("  │  {}  │  │  {}  │  │  {}  │                 | || '__| | | |  / _` |/ _` |/ _` | | '_ \| |                 \\       .".format( c[7],c[8],c[9]))
