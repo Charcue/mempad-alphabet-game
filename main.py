@@ -1,11 +1,13 @@
-# This a game that match uppercase and lowercase letters
-# hidden behind numbers on card. The player chooses a pair
-# of numbers to try and guess upper and lowercase match.
+# This a game where to object is to match uppercase and
+# lowercase letters hidden behind numbered cards. The
+# player chooses a pair of numbers to try and guess 
+# upper and lowercase matches.
+
 # The inspiration and purpose for this program was to help
-# my grand kids with the alphabet and the numbers
+# my grand kids with the alphabet and the numbers.
 
 # The terminal should be be maximized for better
-# readability and alignment
+# readability and alignment.
 
 
 # Importing random and time
