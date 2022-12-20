@@ -1,26 +1,45 @@
+# This a game that match uppercase and lowercase letters
+# hidden behind numbers on card. The player chooses a pair
+# of numbers to try and guess upper and lowercase match
+# The purpose was to help my grand kids with the alphabet
+# and the numbers
+
+# Importing random and time
 import random
 import time
+
+# Importing modules to draw screen template cards
 import draw_screen_pick
 import draw_screen_try
 import draw_screen_great
 import draw_screen_win
+
+# Importing modules for distinguishing cards chosen
 import flash_number
 
 
+# This function takes a list of capital letters and
+# Returns a list 5 random uppercase letters and
+# Their lowercase counterparts
 def get_ltrs_board(a_list):  # pass in letters
     '''
     Passes in a list of letters and returns five uppercase
     and five lowercase letters in randow order in a list
     '''
+    # Gets 5 random sample from variable a_list
     r_a_list = (random.sample((a_list), 5))
+    # Storing empty list case_a_r_list rand_alpha_list
     case_a_r_list = []
-    rand_alpha_store = a_list
     rand_alpha_list = []
+    # Loop though each letter in random sample to store
+    # its uppercase and lowercase counter part in case_a_r_list
     for i in r_a_list:
         case_a_r_list.append(i.upper())
         case_a_r_list.append(i.lower())
+    # Mixing up the uppercase and lowercase
     random.shuffle(case_a_r_list)
     random.shuffle(rand_alpha_list)  # test
+    # Returning randomized list
     return case_a_r_list
 
 
