@@ -3,8 +3,8 @@
 # player chooses a pair of numbers to try and guess 
 # upper and lowercase matches.
 
-# The inspiration and purpose for this program was to help
-# my grand kids with the alphabet and the numbers.
+# The inspiration and purpose for this program was to
+# help my grand kids with the alphabet and the numbers.
 
 # The terminal should be be maximized for better
 # readability and alignment.
@@ -49,7 +49,7 @@ def get_ltrs_board(a_list):  # pass in letters
     return case_a_r_list
 
 
-def ask_for_pair():
+def ask_for_pair(matches_left): # pass in
     repeat_1 = "false"
     repeat_2 = "false"
     choice_1 = 0
@@ -104,6 +104,7 @@ def ask_for_pair():
             draw_screen_great.print_great_job(current_board_list)
             print("You found a match!")
             time.sleep(3)
+            matches_left -= 2
             repeat_2 = "true"
         else:
             draw_screen_try.print_try_pick(current_board_list)
@@ -114,6 +115,7 @@ def ask_for_pair():
             repeat_2 = "true"
     print(answer_list[choice_1])
     print(answer_list[choice_2])
+    return matches_left
 
 
 alphabet_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
@@ -125,13 +127,9 @@ original_board_list = ["0", "1", "2", "3", "4",
                        "5", "6", "7", "8", "9"]
 current_board_list = ["0", "1", "2", "3", "4",
                       "5", "6", "7", "8", "9"]
+matches_available = 10
 
 answer_list = get_ltrs_board(alphabet_list)  # answers for grid
-ask_for_pair()
-# for answer in answer_list:
-for i in range(5):
-    ask_for_pair()
-    if current_board_list == answer_list:
-        break
-draw_screen_pick.print_pick(current_board_list)
+while matches_available > 0:
+    matches_available = ask_for_pair(matches_available)
 draw_screen_win.print_you_win(current_board_list)
