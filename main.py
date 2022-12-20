@@ -95,8 +95,8 @@ def ask_for_pair():
         current_board_list[choice_2] = answer_list[choice_2]
         flash_number.flashNumber(choice_2, answer_list[choice_2], current_board_list)
         if answer_list[choice_1].lower() == answer_list[choice_2].lower():
-            print("Yes!")
             draw_screen_great.print_great_job(current_board_list)
+            print("You found a match!")
             time.sleep(3)
             repeat_2 = "true"
         else:
