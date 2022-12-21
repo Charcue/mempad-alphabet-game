@@ -67,7 +67,7 @@ def ask_for_pair(matches_left):  # pass in
         # error handling for if the user enters more than one number
         # slice takes only the first number
         choice_1 = choice_1[:1]
-        # if statement for quiting program
+        # if statement for quitting program
         if choice_1 == "q" or choice_1 == "Q":
             print("Thank you for playing!")
             exit()
@@ -100,7 +100,7 @@ def ask_for_pair(matches_left):  # pass in
         # error handling for if the user enters more than one number
         # slice takes only the first number
         choice_2 = choice_2[:1]
-        # if statement for quiting program
+        # if statement for quitting program
         if choice_2 == "q" or choice_2 == "Q":
             print("Thank you for playing!")
             exit()

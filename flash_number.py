@@ -15,10 +15,13 @@ def flashNumber(orig,choice,c_list):
     c_list_a = c_list
     t = 0.4
     btime = range(1)
+    # loop for rotating the answer though a ascii characters
+    # Ex. "-", " ", "|", "A"
     for i in btime:
         # clear the screen
         os.system('cls' if os.name == 'nt' else 'clear')
         c_list_a[orig] = str(choice)
+        # draw_screen_pick - repeatedly
         draw_screen_pick.print_pick(c_list_a)
         # c_list_a=clist[choice]= "*"
         time.sleep(t)

@@ -3,10 +3,17 @@ import os
 import sys
 
 def print_great_job(c):
+    '''
+    function to print graphic placeholder for 
+    the user when a pair is found from the list
+    Expect a list 10 single characters
+    (c = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"])
+    '''
     # Clear screen before printing graphics
     os.system('cls' if os.name == 'nt' else 'clear')
     # Top padding
     print("\n" * 4)
+    # graphics format string placeholders
     print("  ╭─────╮  ╭─────╮  ╭─────╮                 ____                _         _       _     _             < hi >") 
     print("  │     │  │     │  │     │                / ___|_ __ ___  __ _| |_      | | ___ | |__ | |             ----") 
     print("  │  {}  │  │  {}  │  │  {}  │               | |  _| '__/ _ \/ _` | __|  _  | |/ _ \| '_ \| |                \\       .".format( c[7],c[8],c[9]))

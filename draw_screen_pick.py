@@ -3,10 +3,17 @@ import os
 import sys
 
 def print_pick(c):
+    '''
+    function to print graphic placeholder for 
+    the user to select a number from list
+    Expect a list 10 single characters
+    (c = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"])
+    '''
     # Clear screen before printing graphics
     os.system('cls' if os.name == 'nt' else 'clear')
     # Top padding
     print("\n" * 4)
+    # graphics format string placeholders
     print("  ╭─────╮  ╭─────╮  ╭─────╮              ____  _      _                                _ _            < hi >") 
     print("  │     │  │     │  │     │             |  _ \(_) ___| | __   __ _    ___ __ _ _ __ __| | |            ----") 
     print("  │  {}  │  │  {}  │  │  {}  │             | |_) | |/ __| |/ /  / _` |  / __/ _` | '__/ _` | |               \\       .".format( c[7],c[8],c[9]))
