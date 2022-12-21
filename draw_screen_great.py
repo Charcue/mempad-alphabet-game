@@ -1,10 +1,11 @@
 import os
-import time
+# import time
 import sys
-import random
 
 def print_great_job(c):
+    # Clear screen before printing graphics
     os.system('cls' if os.name == 'nt' else 'clear')
+    # Top padding
     print("\n" * 4)
     print("  ╭─────╮  ╭─────╮  ╭─────╮                 ____                _         _       _     _             < hi >") 
     print("  │     │  │     │  │     │                / ___|_ __ ___  __ _| |_      | | ___ | |__ | |             ----") 

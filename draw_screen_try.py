@@ -1,10 +1,11 @@
 import os
-import time
+# import time
 import sys
-import random
 
 def print_try_pick(c):
+    # Clear screen before printing graphics
     os.system('cls' if os.name == 'nt' else 'clear')
+    # Top padding
     print("\n" * 4)
     print("  ╭─────╮  ╭─────╮  ╭─────╮                _____                               _       _              < hi >") 
     print("  │     │  │     │  │     │               |_   _| __ _   _    __ _  __ _  __ _(_)_ __ | |              ----") 
