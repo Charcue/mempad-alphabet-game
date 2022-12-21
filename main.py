@@ -56,7 +56,7 @@ def ask_for_pair(matches_left): # pass in
     choice_2 = 0
 
     draw_screen_pick.print_pick(current_board_list)
-    print(answer_list)
+    # print(answer_list) # comment out for answers
     print("Can you find the match?")
     while repeat_1 == "false":
         choice_1 = input("Enter your first choice!")
