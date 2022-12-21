@@ -2,12 +2,18 @@ import os
 import time
 import draw_screen_pick
 
+# orig=position_number, choice=flippe_letter, c_list=current_list
+# Mo
 def flashNumber(orig,choice,c_list):
-    # clear the screen
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print(c_list)
+    '''
+    flashNumber - displays acsii characters over the number in the
+    card to simulate the letter turning to highlight the choice the 
+    user has chosen
+    (orig=position_number, choice=flippe_letter, c_list=current_list)
+    '''
+    # print(c_list) # test to compare list when flashed
     c_list_a = c_list
-    t = 0.5
+    t = 0.4
     btime = range(1)
     for i in btime:
         # clear the screen
