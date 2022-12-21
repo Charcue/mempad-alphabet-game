@@ -21,7 +21,7 @@ def flashNumber(orig,choice,c_list):
         # clear the screen
         os.system('cls' if os.name == 'nt' else 'clear')
         c_list_a[orig] = str(choice)
-        # draw_screen_pick - repeatedly
+        # draw_screen_pick - repeat
         draw_screen_pick.print_pick(c_list_a)
         # c_list_a=clist[choice]= "*"
         time.sleep(t)
