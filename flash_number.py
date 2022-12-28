@@ -48,3 +48,5 @@ def flashNumber(orig,choice,c_list):
 
 # test_c_list = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9"]
 # flashNumber(2,"A",test_c_list)
+
+# ███ #  Blocks to try in flash
